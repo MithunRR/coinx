@@ -1,0 +1,23 @@
+
+
+.main-header{
+    background-color: black;
+    padding: 1rem;
+
+    div{
+        display: flex;
+        button{
+            margin-right: 1rem;
+            background-color: black;
+            border: none;
+            outline: none;
+            a{
+                color: white;
+
+                &:hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+import React from 'react'
+
+const Footer = () => {
+  return (
+    <div className='footer-container'>
+      <div className="logo-rights">
+        <h1>CoinX</h1>
+        <p>© All rights reserved | 2025</p>
+      </div>
+      <div className="social-media-links">
+        <a href="https://www.facebook.com/mithunrr07" target='blank'>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAY1BMVEU7V53///82U5vi5u9merHFy+BWbalVaqb8/P5LZKRQZqXN0uTV2uj4+fyDk762vtchRpWgrM0wT5koSpfc4OxDXaCap8pacavx8/fs7vVzhLWJl76RncR6i7hrfbCpss8VQJJ/sDjpAAADJklEQVR4nO3bbY+iMBiFYfcBlFfRAgoCMv//V67uzGQnu8ECpvTQnPvDJGNiwpXyZgu7HWOMMcYYY4wxxhhjziWiHol8/SPP/4vPj74+3EiiiqLa+7dj212+69r2eOxvt7t/jatKimIbInUSvx3ypPTqus6+q581nuelSZDnw3DZ295ObY+daXcfkrL+NV7452/Wgw/N42iIu6TJXkj+dsTGiPiDN00CjzlF52aqBBwjRVfOoEBj1CGYRQHGiPTzhgUYI1U352iBxkg868jHxlTnV9fIbWFUt8SCiTm1iyyQGLX3FlkQMXKae30BxqhhoQUQo24LTsqgGKnypRZATL94YOAwUgWhMxj1xsDgYZYfMXAY5c++78fFFJflRwwaRnbv7GVgmPf2MjCMtO/sZVgYqebcloXZv2Fh4mn3y1lTPqeXh/M/XW0Dfib+lB8yTTL0sfr4OP0X0sA87sv0vzDDpN1vYvFCOu20cphf1QYkz85aTLBXtjdyYlWuOzOn/kaG5XFmTjSW+mJ7Gycnke76n163MjA7OWgw2VBtB7PXYOrO9iZOT64aTIO+Avsj7Q2Ad9vKeXkCJvUdwiTbOZlpMaFTmGBPjJWIQY0Y1IhBjRjUiEGNGNSIQY0Y28lISos5qLHv2nrrJDqM1evmAPwoftH6FIkuSTpSqVkEqNPkRcH6E1ES5ZNfVJhXc3cIY2GJwBwmOTiEyddf7zCHGdafiDaHOTuEqTuHMM3RIUx5X/9+xhjGxkq0MUwSOYQJLCyrm8KE+c4djJUnUUxhmtYhjGfjgQdTmNLGw1umMFYeeDKFSWJ3MGFu4ZppCpOdq/UtpjB2Hng0hWltPPBkCNP0DmHK9SfNzGHSqzuYMLBxmTGFsTBp9ol56+2lEYyFSbMnJs6zcCztNo+VXQobmJfrM6/fng2Tezz2VRvX/2ejK19vrZxZwoy2yTXNsYhBjRjUiEGNGNSIQY0Y1IhBjRjUiEGNGNSIQY0Y1IhBjRjUiEGNGNSIQY0Y1IhBjRjUiEGNGNSIQY0Y1IhBjRjUiEGNGNSIQY0Y1IhBjRjUiEGNGNSImdNvEnlPuOevTYoAAAAASUVORK5CYII=" alt="" />
+        </a>
+        <a href="https://twitter.com/Mithun_RR_7"  target='blank'>
+          <img src="data:image/png;base64,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" alt="" />
+        </a>
+        <a href="https://www.instagram.com/mithun_r_r"  target='blank'>
+          <img src="https://img.freepik.com/free-vector/instagram-logo_1199-122.jpg?semt=ais_hybrid" alt=""/>
+        </a>
+      </div>
+    </div>
+  )
+}
+
+export default Footer

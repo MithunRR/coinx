@@ -1,0 +1,26 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: black;
+
+    .logo-rights{
+        h1{
+            color: white;
+        }
+        p{
+            color: gray;
+        }
+    }
+
+    .social-media-links{
+        display: flex;
+        a{
+            margin: 1rem;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
