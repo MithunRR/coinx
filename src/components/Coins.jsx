@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { server } from '../index'
 import { Link } from 'react-router-dom';
+import { CoinContext } from '../App';
 
 const Coins = () => {
   const [coins, setCoins] = useState([]);
@@ -9,6 +10,8 @@ const Coins = () => {
   const [error, setError] = useState(false);
   const [page, setPage] = useState(1);
   const [currency, setCurrency] = useState("inr");
+
+  const { setCoin } = useContext(CoinContext);
 
   const currencySymbol = currency === "inr" ? "₹" : currency === "eur" ? "€" : "$";
 
@@ -24,15 +27,18 @@ const Coins = () => {
       try {
         const {data} = await axios.get(`${server}/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=${page}`);
         setCoins(data);
+        // console.log(data);
+        if (data.length > 0) {
+          setCoin(data[0]);
+        }
         setLoading(false);
       } catch (err) {
         setError(true);
         setLoading(false);
       }
-      
     }
     fetchCoins();
-  }, [currency, page])
+  }, [currency, page, setCoin])
 
   if(error){
     return <div style={{color: 'red', textAlign: 'center'}}>Error While Fetching Coins</div>
