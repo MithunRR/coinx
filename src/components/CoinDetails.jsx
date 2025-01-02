@@ -13,7 +13,6 @@ const CoinDetails = () => {
 
   const currencySymbol = currency === "inr" ? "₹" : currency === "eur" ? "€" : "$";
 
-  // Ensure coin.market_data exists before accessing properties
   const high = coin.market_data?.high_24h?.[currency] || 0;
   const low = coin.market_data?.low_24h?.[currency] || 0;
   const currentPrice = coin.market_data?.current_price?.[currency] || 0;
